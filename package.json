@@ -1,0 +1,23 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "solutions for http://adventofcode.com/",
+  "main": "test.js",
+  "dependencies": {
+    "js-md5": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giacomozinetti/adventofcode.git"
+  },
+  "author": "giacomozinetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giacomozinetti/adventofcode/issues"
+  },
+  "homepage": "https://github.com/giacomozinetti/adventofcode#readme"
+}
