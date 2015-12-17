@@ -13,17 +13,20 @@ var createDistancesMatrix = function(input) {
     return m;
 };
 
-var distance = function(places, prev) {
+var distance = function(fn, places, prev) {
     if (places.length === 1 && !prev) return 0;
     if (places.length === 1) return distances[prev][places[0]];
     var d = [];
     for (var i = 0; i < places.length; i++) {
         let ps = places.slice(0);
         let current = ps.splice(i, 1);
-        d.push((distances[current][prev] || 0) + distance(ps, current));
+        d.push((distances[current][prev] || 0) + distance(fn, ps, current));
     }
-    return Math.min(...d);
+    return fn(...d);
 };
+
+var maxDistance = distance.bind(null, Math.max);
+var minDistance = distance.bind(null, Math.min);
 
 
 
@@ -36,9 +39,11 @@ var input = require('fs')
 
 var distances = createDistancesMatrix(input);
 var places = Object.keys(distances);
+
 // var places = ['Straylight', 'AlphaCentauri']; // 107
-// var places = ['Arbre', 'AlphaCentauri', 'Straylight']; // 46 + 14, 107
+// var places = ['Arbre', 'AlphaCentauri', 'Straylight']; // 60
 // var places = ['Arbre', 'AlphaCentauri', 'Straylight', 'Snowdin']; // 144
 // var places = ['Snowdin', 'Straylight', 'AlphaCentauri', 'Arbre']; // 144
 
-console.log(distance(places));
+console.log(minDistance(places));
+console.log(maxDistance(places));
