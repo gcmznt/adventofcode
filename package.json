@@ -4,11 +4,12 @@
   "description": "solutions for http://adventofcode.com/",
   "main": "test.js",
   "dependencies": {
+    "jest": "^21.2.1",
     "js-md5": "^0.3.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest; exit 0"
   },
   "repository": {
     "type": "git",
