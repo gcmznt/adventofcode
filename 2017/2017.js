@@ -1,4 +1,4 @@
-const day = 1;
+const day = process.env.DAY;
 
 const mod = require(`./day${day}`);
 const input = require("fs").readFileSync(`./day${day}.input.txt`, "utf8");

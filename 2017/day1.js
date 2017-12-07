@@ -4,25 +4,15 @@ const prepareInput = input =>
     .split("")
     .map(e => parseInt(e, 10));
 
-const part1 = input =>
-  prepareInput(input).reduce(
-    (accumulator, currentValue, currentIndex, array) =>
-      array[(currentIndex + 1) % array.length] === currentValue
-        ? accumulator + currentValue
-        : accumulator,
-    0
-  );
+const count = posFn => (acc, curr, i, array) =>
+  acc + (array[posFn(i, array.length)] === curr ? curr : 0);
 
-const part2 = input =>
-  prepareInput(input).reduce(
-    (accumulator, currentValue, currentIndex, array) =>
-      array[(array.length / 2 + currentIndex) % array.length] === currentValue
-        ? accumulator + currentValue
-        : accumulator,
-    0
-  );
+const posFn1 = (i, l) => (i + 1) % l;
+const posFn2 = (i, l) => (l / 2 + i) % l;
+
+const reduce = (input, posFn) => prepareInput(input).reduce(count(posFn), 0);
 
 module.exports = {
-  part1,
-  part2
+  part1: input => reduce(input, posFn1),
+  part2: input => reduce(input, posFn2)
 };
