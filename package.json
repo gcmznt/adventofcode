@@ -2,23 +2,32 @@
   "name": "adventofcode",
   "version": "1.0.0",
   "description": "solutions for http://adventofcode.com/",
-  "main": "test.js",
+  "main": "run.js",
   "dependencies": {
-    "jest": "^21.2.1",
-    "js-md5": "^0.3.0"
+    "jest": "^24.9.0",
+    "js-md5": "^0.7.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "1.19.1"
+  },
   "scripts": {
-    "test": "jest; exit 0"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/giacomozinetti/adventofcode.git"
+    "url": "git+https://github.com/gcmznt/adventofcode.git"
   },
-  "author": "giacomozinetti",
+  "author": "Giko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/giacomozinetti/adventofcode/issues"
+    "url": "https://github.com/gcmznt/adventofcode/issues"
   },
-  "homepage": "https://github.com/giacomozinetti/adventofcode#readme"
+  "homepage": "https://github.com/gcmznt/adventofcode#readme"
 }
