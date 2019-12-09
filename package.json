@@ -5,7 +5,9 @@
   "main": "run.js",
   "dependencies": {
     "jest": "^24.9.0",
-    "js-md5": "^0.7.3"
+    "js-md5": "^0.7.3",
+    "node-europa": "^4.0.0",
+    "puppeteer": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^6.7.2",
