@@ -20,7 +20,9 @@
     "prettier": "1.19.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "node run.js",
+    "watch": "nodemon run.js --ignore '*.json'"
   },
   "repository": {
     "type": "git",
