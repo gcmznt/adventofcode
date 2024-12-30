@@ -7,9 +7,9 @@ const input = require("fs").readFileSync(
 const exercise = require(".");
 
 test("Part 1", () => {
-  expect(exercise(input).part1()).toBe("123");
+  expect(exercise(input).part1()).toBe(2);
 });
 
 test("Part 2", () => {
-  expect(exercise(input).part2()).toBe("123");
+  expect(exercise(input).part2()).toBe(4);
 });
